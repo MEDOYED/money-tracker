@@ -1,4 +1,4 @@
-import SpendingPage from "@/pages/spending/ui/SpendingPage";
+import { SpendingPage } from "@pages/spending";
 
 function App() {
   return <SpendingPage />;
