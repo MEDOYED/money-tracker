@@ -1,12 +1,31 @@
 import s from "./spending-categories.module.scss";
 
-const categories = ['🍔', '🍔', '🍔', '🍔', '🍔', '🍔', '🍔', '🍔', '🍔', '🍔', '🍔', '🍔', '🍔', '🍔', '🍔', '🍔', '🍔', '🍔'];
+const CATEGORIES = [
+  "🍔",
+  "🍔",
+  "🍔",
+  "🍔",
+  "🍔",
+  "🍔",
+  "🍔",
+  "🍔",
+  "🍔",
+  "🍔",
+  "🍔",
+  "🍔",
+  "🍔",
+  "🍔",
+  "🍔",
+  "🍔",
+  "🍔",
+  "🍔",
+];
 
 export const SpendingCategories = () => {
   return (
     <section className={s.categories}>
       <div className={s.categoryList}>
-        {categories.map((category, index) => (
+        {CATEGORIES.map((category, index) => (
           <div className={s.category} key={index}>
             {category}
           </div>
