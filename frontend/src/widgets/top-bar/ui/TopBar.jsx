@@ -1,21 +1,40 @@
-import styles from "./TopBar.module.scss";
+import { NavLink, Link } from 'react-router-dom';
+import s from './TopBar.module.scss';
 
 function TopBar() {
     return (
-        <header className={styles.topBar}>
-            <button className={styles.menuButton} type="button">
+        <header className={s.topBar}>
+
+            <button className={s.menuButton} type="button">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
 
-            <nav className={styles.navigation}>
-                <a href="/spending">Расходы</a> |
-                <a href="/income">Доходы</a>
+            <nav className={s.navigation}>
+
+                <NavLink
+                    to="/"
+                    className={({ isActive }) =>
+                        isActive ? s.active : s.link
+                    }
+                >
+                    Расходы
+                </NavLink>
+
+                <NavLink
+                    to="/income"
+                    className={({ isActive }) =>
+                        isActive ? s.active : s.link
+                    }
+                >
+                    Доходы
+                </NavLink>
+
             </nav>
 
             <select
-                className={styles.select}
+                className={s.select}
                 name="incomesList"
                 id="incomesList"
             >
@@ -24,9 +43,12 @@ function TopBar() {
                 <option value="freelance">Кредитка</option>
             </select>
 
-            <a className={styles.historyLink} href="/history">
+            <Link
+                to="/history"
+                className={s.historyLink}
+            >
+            </Link>
 
-            </a>
         </header>
     );
 }

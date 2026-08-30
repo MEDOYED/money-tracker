@@ -40,7 +40,6 @@
     margin-left: 32px;
 
     a {
-        color: #222;
         text-decoration: none;
         font-size: 16px;
     }
@@ -66,4 +65,12 @@
     height: 30px;
     border-radius: 50%;
     background-color: orange;
+}
+
+.link {
+    color: #222;
+}
+
+.active {
+    color: orange;
 }

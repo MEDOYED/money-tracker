@@ -1,0 +1,103 @@
+.page {
+    background-color: rgb(236, 218, 218);
+}
+
+.sources {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    padding: 20px 0;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    width: 80%;
+    height: 100px;
+    padding: 10px 10px;
+    background-color: red;
+
+    &__name {
+        font-size: 20px;
+
+    }
+
+    &__edit {
+        align-self: flex-end;
+        background-color: orange;
+    }
+
+    &__balance {
+        align-self: flex-end;
+
+        span {
+            margin-right: 5px;
+        }
+    }
+}
+
+.addButton {
+    margin: 0 auto;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: orange;
+    color: white;
+    font-size: 32px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    background-color: rgba($color: #000000, $alpha: 0.7)
+}
+
+.modal {
+    margin: auto;
+    width: 80%;
+    height: 50%;
+    background-color: white;
+
+    h2 {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    &__card {
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        width: 80%;
+        height: 100px;
+        padding: 10px 10px;
+        background-color: red;
+    }
+
+    &__input {
+        width: 50%;
+    }
+
+    &__inputBalance {
+        justify-self: flex-end;
+        align-self: flex-end;
+    }
+
+    button {
+        width: 50%;
+        height: 50px;
+        background-color: red;
+        font-weight: bold;
+        font-size: 32px;
+    }
+}
