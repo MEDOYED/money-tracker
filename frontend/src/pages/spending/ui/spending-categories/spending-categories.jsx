@@ -1,18 +1,35 @@
 import s from "./spending-categories.module.scss";
 
+const CATEGORIES = [
+  "🍔",
+  "🍔",
+  "🍔",
+  "🍔",
+  "🍔",
+  "🍔",
+  "🍔",
+  "🍔",
+  "🍔",
+  "🍔",
+  "🍔",
+  "🍔",
+  "🍔",
+  "🍔",
+  "🍔",
+  "🍔",
+  "🍔",
+  "🍔",
+];
+
 export const SpendingCategories = () => {
   return (
     <section className={s.categories}>
       <div className={s.categoryList}>
-        <button type="button">🍔</button>
-        <button type="button">🚗</button>
-        <button type="button">🏠</button>
-        <button type="button">🛒</button>
-        <button type="button">💊</button>
-        <button type="button">🎮</button>
-        <button type="button">☕</button>
-        <button type="button">✈️</button>
-        <button type="button">👕</button>
+        {CATEGORIES.map((category, index) => (
+          <div className={s.category} key={index}>
+            {category}
+          </div>
+        ))}
       </div>
 
       <button className={s.addButton} type="button">
