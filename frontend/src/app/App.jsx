@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 
 import { SpendingPage } from "@pages/spending";
-import { IncomePage } from "@pages/Income";
+import { IncomePage } from "@pages/income";
 import { HistoryPage } from "@pages/history";
 
 function App() {
